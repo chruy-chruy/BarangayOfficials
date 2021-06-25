@@ -1,0 +1,135 @@
+/*.container {
+  width: 100vw;
+  height: 100%;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+.calendar {
+  color: black;
+  width: 100%;
+  height: 56.5%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.7)
+  );
+  border-radius: 0.75rem;
+  position: relative;
+  box-shadow: 0 0.1rem 0.25rem rgba(22, 22, 22, 0.7);
+}
+
+.month {
+  width: 100%;
+  height: calc(10rem / 2);
+  background: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  text-align: center;
+  /*text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.5);*/
+}
+
+.month img {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.month img:hover {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.month h1 {
+  font-size: calc(3rem / 2);
+  font-weight: 800;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.15rem;
+}
+
+.month p {
+  font-size: calc(1.8rem / 2);
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.weekdays {
+  width: 100%;
+  height: calc(5rem / 2);
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  /* font-size: calc(1.5rem/2);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  width: calc(22.1rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);*/
+
+  font-size: calc(1.8rem / 2);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  width: calc(58.5rem / 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  color: #444;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(0.2rem / 2);
+}
+
+.days div {
+  /*font-size: calc(1.4rem/2);
+  margin: calc(0.3rem/2);
+  width: calc(20.1rem / 7);
+  height: calc(5rem/2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+  */
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  /*  width: calc(28.95rem / 7);*/
+  width: 14.2%;
+  height: calc(5.57rem / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days div:hover:not(.today) {
+  border: 0.1rem solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  color: gray;
+  opacity: 0.5;
+}
+
+.today {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
